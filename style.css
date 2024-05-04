@@ -1,0 +1,210 @@
+*{
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+
+}
+
+html{
+ background-color: aqua;
+ font-family: cursive;
+
+
+}
+
+body{
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+.boton{
+    display: block;
+    background-color: brown;
+    color: black;
+    margin: 20px auto;
+    width: 160px;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 20px;
+
+
+}
+
+.boton:hover{
+  background-color: rgb(10, 10, 80);
+  color: rgb(180, 241, 161);
+
+}
+
+.boton:active{
+   background-color: rgb(47, 222, 245);
+   color: rgb(160, 30, 160);
+    
+}
+
+#p1:target{
+    background-color: rgb(172, 75, 94);
+}
+
+#p2:target{
+    background-color: rgb(58, 73, 116);
+}
+
+#p3:target{
+    background-color: rgb(66, 104, 41);
+}
+
+.textos1, .textos2{
+    background-color: rgb(212, 132, 41);
+    width: max-content;
+    padding:  60px;
+    margin: 30px auto;
+    text-align: center;
+
+}
+/*textos1 p:first-child*/
+/*textos1 p:last-child ultimo*/
+/*textos1 p:nht-child(odd) impar*/
+/*textos1 p:nht-child(even) */
+/* .textos1 p:nth-child(3) */
+/* .textos1 p:nht-child(n+3)  */
+
+.textos1 p:nht-child(n+3)
+{
+    background-color: rgb(218, 21, 21);
+    color: rgb(15, 97, 97);
+    
+}
+
+
+/* .tabla */
+.tabla{
+ margin: 30px auto;
+ border-collapse: collapse;
+
+
+}
+
+.tabla th td{
+    border: 2px solid rgb(10, 10, 12);
+    padding: 5px;
+}
+
+.tabla thead{
+   background-color: rgba(62, 104, 20, 0.76);
+   color: aliceblue;
+
+}
+
+.tabla tr:nth-child(even){
+    background-color: black;
+    color: aliceblue;
+}
+
+.nombre{
+    display: flex;
+    margin: 40px;
+    justify-content: center;
+    list-style: none;
+}
+
+.nombre li{
+   font-size: xx-large;
+   font-weight: bold;
+
+
+}
+
+.nombre li:nth-child(odd){
+    background-color: rgb(53, 41, 226);
+    color: antiquewhite;
+    padding: 10px;
+    box-shadow: 5px 5px 7px gold;
+
+}
+
+.nombre li:nth-child(even){
+
+    background-color: antiquewhite;
+    color: aqua;
+    padding: 10px;
+    box-shadow: 5px 5px 7px gray;
+}
+
+.lista{
+    width: max-content;
+    margin: 30px auto;
+    list-style: none;
+    background-color: coral;
+    padding: 20px;
+    
+}
+
+.lista li::before{
+    content: "😊";
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 10px;
+}
+
+.textos2 p:after{
+    content: "🎉";
+
+
+}
+
+.cuadro{
+    background-color: magenta;
+    width: 55%;
+    padding: 15px;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+
+}
+
+.cuadro::before{
+    width: 80px;
+    height: 30px;
+    content: "🎁🎉🎶";
+    top: calc(50% - 15px);
+    right: calc(100% - 15px);
+    position: absolutes;
+}
+
+.cuadro::after{
+    width: 80px;
+    height: 30px;
+    content: "🎁🎉🎶";
+    top: calc(50% - 15px);
+    left: calc(100% - 15px);
+    position: absolutes;
+
+}
+
+@media screen and (max-width:500px) {
+    .cuadro::after, .cuadro::after{
+    content: "";
+    }
+    .cuadro{
+        width: 100%;
+    }
+}
+
+.formu{
+    margin: 50px 20px;
+}
+
+label{
+    background-color: rgb(10, 32, 32);
+    padding: 10px;
+    color: brown;
+    
+}
+
+.formu:checked + label{
+    background-color: blue;
+    transition: 4s;   
+}
